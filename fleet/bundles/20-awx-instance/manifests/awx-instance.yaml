@@ -4,8 +4,7 @@ kind: AWX
 metadata:
   name: awx-instance
 spec:
-  defaultNamespace: awx
-   
+  
    #enable ingress
   ingress_type: ingress 
 

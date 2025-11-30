@@ -4,6 +4,6 @@ kind: Bundle
 metadata:
   name: awx-instance
 spec:
-  namespace: awx
+  defaultNamespace: awx
   resources:
     - manifests/
