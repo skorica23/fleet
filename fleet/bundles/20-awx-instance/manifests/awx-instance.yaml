@@ -7,7 +7,7 @@ spec:
    #enable ingress
   ingress_type: ingress 
 
-  hostanme: ansible.local
+  hostname: ansible.local
 
   service_type: ClusterIP
 
