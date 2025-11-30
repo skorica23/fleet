@@ -2,7 +2,7 @@
 apiVersion: awx.ansible.com/v1beta1
 kind: AWX
 metadata:
-  name: awx-testing
+  name: awx-demo
 spec:
    #enable ingress
   ingress_type: ingress 
