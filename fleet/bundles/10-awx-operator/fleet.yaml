@@ -7,11 +7,11 @@ helm:
   repo: https://ansible-community.github.io/awx-operator-helm
   chart: awx-operator
   version: 3.2.0
-  targetCustomizations:
-   - name: local
-     clusterSelector:
-       matchLabels:
-         environment: rke2
-  valuessFiles:
-     - values.yaml
+  # targetCustomizations:
+  #  - name: local
+  #    clusterSelector:
+  #      matchLabels:
+  #        environment: rke2
+  # valuessFiles:
+  #    - values.yaml
     
