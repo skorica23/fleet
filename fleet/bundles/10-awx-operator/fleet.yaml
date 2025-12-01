@@ -4,7 +4,7 @@ kind: Bundle
 metadata:
   name: awx-operator
 spec:
-  clusterScope: true
+  #clusterScope: true
 
   defaultNamespace: awx-operator
   targetNamespace: awx-operator
@@ -17,10 +17,10 @@ spec:
     chart: awx-operator
     version: 3.2.0
     installCrds: true
-    targets:
-      - clusterSelector:
-          matchLabels:
-            environment: rke2
+  targets:
+    - clusterSelector:
+        matchLabels:
+          provider.cattle.io: rke2
     #valuessFiles:
     #  - values.yaml
     
