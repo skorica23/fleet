@@ -4,6 +4,8 @@ kind: Bundle
 metadata:
   name: awx-operator
 spec:
+  clusterScope: true
+
   defaultNamespace: awx-operator
   targetNamespace: awx-operator
   resources:
@@ -14,6 +16,7 @@ spec:
     repo: https://ansible-community.github.io/awx-operator/
     chart: awx-operator
     version: 3.2.0
+    installCrds: true
   # targetCustomizations:
   #  - name: local
   #    clusterSelector:
