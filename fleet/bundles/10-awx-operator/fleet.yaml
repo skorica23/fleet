@@ -17,8 +17,7 @@ spec:
     chart: awx-operator
     version: 3.2.0
     installCrds: true
-    targetCustomizations:
-    #- name: local
+    targets:
       - clusterSelector:
           matchLabels:
             environment: rke2
