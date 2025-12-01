@@ -17,10 +17,14 @@ spec:
     chart: awx-operator
     version: 3.2.0
     installCrds: true
+  
+  
   targets:
-    - clusterSelector:
-        matchLabels:
-          provider.cattle.io: rke2
+    - {}
+    
+    #- clusterSelector:
+    #    matchLabels:
+    #      provider.cattle.io: rke2
     #valuessFiles:
     #  - values.yaml
     
