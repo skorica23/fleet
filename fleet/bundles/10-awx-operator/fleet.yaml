@@ -5,6 +5,9 @@ metadata:
   name: awx-operator
 spec:
   defaultNamespace: awx-operator
+  targetNamespace: awx-operator
+  resources:
+    - manifests/
   helm:
     takeOwnership: true
     releaseName: awx-operator
