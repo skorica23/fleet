@@ -8,7 +8,7 @@ spec:
   helm:
     takeOwnership: true
     releaseName: awx-operator
-    repo: https://ansible-community.github.io/awx-operator-helm
+    repo: https://ansible-community.github.io/awx-operator
     chart: awx-operator
     version: 3.2.0
   # targetCustomizations:
