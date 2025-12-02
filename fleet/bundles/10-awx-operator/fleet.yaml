@@ -4,11 +4,6 @@ kind: Bundle
 metadata:
   name: awx-operator
 spec:
-  #clusterScope: true
-
-  defaultNamespace: awx-operator
- 
-  
   helm:
     takeOwnership: true
     releaseName: awx-operator
@@ -16,14 +11,6 @@ spec:
     repo: https://ansible-community.github.io/awx-operator-helm/
     version: 3.2.0
     installCrds: true
-  
-  
-  targets:
-    - {}
-    
-    #- clusterSelector:
-    #    matchLabels:
-    #      provider.cattle.io: rke2
-    #valuessFiles:
-    #  - values.yaml
-    
+defaultNamespace: awx-operator  
+targets:
+- {}    
