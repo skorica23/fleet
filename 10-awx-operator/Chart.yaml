@@ -1,6 +1,8 @@
 apiVersion: v2
-name: awx-operator-test
-description: Minimal test chart to verify Fleet + Helm wiring
-type: application
+name: awx-operator-wrapper
 version: 0.1.0
-appVersion: "0.1.0"
+dependencies:
+  - name: awx-operator
+    version: 3.2.0
+    repository: https://ansible-community.github.io/awx-operator-helm/
+
