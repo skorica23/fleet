@@ -13,11 +13,4 @@ spec:
     version: 3.2.0
     installCrds: true
   targets:
-   - {}
-
-
-
-#defaultNamespace: awx-operator 
-#targetNamespace: awx-operator
-#targets:
-#- 
+    - {}
