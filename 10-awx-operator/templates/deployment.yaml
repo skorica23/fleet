@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: awx-operator
+spec:
+  replicas: {{ .Values.replicaCount}}
+  selector:
+    matchLabels:
+      app: awx-operator
+  templates:
+    metadata:
+      labels:
+        app: awx-operator
+    spec:
+      containers:
+        - name: awx-operator
+          image: "{{ .Values.image-repository }}:{{ .Values.image.tag }}"
+          paths:
+            - containerPOrt: {{ .Values.service.port }}
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}

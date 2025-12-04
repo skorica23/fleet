@@ -1,0 +1,12 @@
+replicaCount: 1
+
+image:
+  repository: ansible/awx-operator
+  tag: stable
+
+service:
+  enabled: true
+  type: ClusterIP
+  port: 3000
+
+resources: {}
