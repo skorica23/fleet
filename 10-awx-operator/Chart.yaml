@@ -1,6 +1,7 @@
 apiVersion: v2
 name: awx-operator
-chart: awx-operator
-description: A helm chart for deploying hawx-operator
-version: 1.0.0
+#chart: awx-operator
+description: ty supported AWX operator helm chart
+type: application
+version: 3.2.0
 appVersion: 2.19.1
