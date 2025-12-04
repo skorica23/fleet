@@ -25,4 +25,4 @@ helm:
       spec:
         ingress_type: none
         route_tls_termination_mechanism: edge
-        replicas: 1
+        replicas: 2
