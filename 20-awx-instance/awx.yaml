@@ -1,0 +1,21 @@
+apiVersion: awx.ansible.com/v1beta1
+kind: AWX
+metadata:
+  name: awx
+  namespace: awx
+spec:
+  replicas: 2
+
+  # Disable ingress controller usage
+  ingress_type: none
+
+  # Configure NodePort for external access
+  service_type: NodePort
+
+  # You can optionally set NodePort manually (optional)
+  nodeport_port: 30080
+  nodeport_tls_port: 30443
+
+  # Basic resource settings
+  web_replicas: 2
+  task_replicas: 2
