@@ -16,13 +16,13 @@ helm:
       tag: "2.19.1"
     logLevel: DEBUG
 
-    # Example configuration to deploy an AWX instance
-    awx-operator:
-      enabled: true
+    # # Example configuration to deploy an AWX instance
+    # awx-operator:
+    #   enabled: true
 
-    awx:
-      enabled: true
-      spec:
-        ingress_type: none
-        route_tls_termination_mechanism: edge
-        replicas: 2
+    # awx:
+    #   enabled: true
+    #   spec:
+    #     ingress_type: none
+    #     route_tls_termination_mechanism: edge
+    #     replicas: 2
