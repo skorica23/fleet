@@ -16,7 +16,7 @@ helm:
       tag: "2.19.1"
     logLevel: DEBUG
     #enable namespace watch to overwrite default  conf
-    watchNamespace: ""
+    #watchNamespace: ""
 
     # # Example configuration to deploy an AWX instance
     # awx-operator:

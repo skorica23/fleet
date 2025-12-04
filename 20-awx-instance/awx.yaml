@@ -1,8 +1,8 @@
 apiVersion: awx.ansible.com/v1beta1
 kind: AWX
 metadata:
-  name: awx
-  namespace: awx
+  name: awx-instance
+  namespace: awx-operator
 spec:
   replicas: 2
 
