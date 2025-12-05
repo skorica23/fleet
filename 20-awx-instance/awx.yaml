@@ -17,13 +17,13 @@ spec:
   #nodeport_tls_port: 30443
 
   # Basic resource settings
-  web_replicas: 2
-  task_replicas: 2
+  web_replicas: 1
+  task_replicas: 1
  
   pg_capacity: 10Gi
   postgres_database:: awx
-  # pv and pvc assigment:
-  volumes:
-    - name: awx-postgres-volumes
-      persistentVolumeClaim:
-        claimName: awx-postgres-pvc
+  # # pv and pvc assigment:
+  # volumes:
+  #   - name: awx-postgres-volumes
+  #     persistentVolumeClaim:
+  #       claimName: awx-postgres-pvc
