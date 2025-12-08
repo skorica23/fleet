@@ -3,12 +3,11 @@ defaultNamespace: openbao
 targets:
   clusterSelector: {}
 
-
 helm:
   releaseName: openbao
   chart: openbao
   version: 0.21.0
-  repo: "https://openbao.github.io/openbao-helm" 
+  repo: "https://openbao.github.io/openbao-helm/" 
 
   timeoutSeconds: 300
   
