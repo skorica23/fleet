@@ -30,6 +30,17 @@ helm:
       enabled: true
       type: NodePort
       nodePort: 40000
+    
+
+    affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: kubernetes.io/hostname  # Example key
+                operator: In
+                values:
+                  - rke-node2
  
 targets:
   - clusterSelector: {}
