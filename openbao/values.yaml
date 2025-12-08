@@ -25,3 +25,15 @@ ha:
       }
 
       service_registration "kubernetes" {}
+
+
+affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: kubernetes.io/hostname  # Example key
+                operator: In
+                values:
+                  - rke-node2
+                  - rke-node3
