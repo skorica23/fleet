@@ -1,7 +1,7 @@
 defaultNamespace: openbao
 
-targets:
-  clusterSelector: {}
+# targets:
+#   clusterSelector: {}
 
 helm:
   releaseName: openbao
@@ -31,4 +31,5 @@ helm:
       type: NodePort
       nodePort: 40000
  
-    
+targets:
+  - clusterSelector: {}
