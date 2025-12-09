@@ -19,7 +19,7 @@ helm:
       ha:
         enabled: true
         # 3 OpenBao pods (HA cluster)
-        replicas: 3
+        replicaCount: 3
 
         # Enable Integrated Storage (Raft) backend
         raft:
