@@ -1,4 +1,4 @@
-defaultnamespace: openbao
+defaultNamespace: openbao
 
 helm:
   # Name of the Helm release
