@@ -22,10 +22,10 @@ helm:
         # 3 OpenBao pods (HA cluster)
         replicaCount: 3
         
-        podTemplate:
-         spec:
-           nodeSelector:
-             openbao-node: "true"
+     
+     
+        nodeSelector:
+           openbao-node: "true"
         
         affinity:
           nodeAffinity:
