@@ -17,35 +17,26 @@ helm:
   values:
     # OpenBao server configuration
     server:
+
+      nodeSelector:
+           openbao-node: "true"
+        
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+             - matchExpressions:
+               - key: openbao-node
+                 operator: Exists
       ha:
         enabled: true
         # 3 OpenBao pods (HA cluster)
         replicaCount: 3
         
-     
-     
-        nodeSelector:
-           openbao-node: "true"
-        
-        affinity:
-          nodeAffinity:
-            requiredDuringSchedulingIgnoredDuringExecution:
-             nodeSelectorTerms:
-              - matchExpressions:
-                - key: openbao-node
-                  operator: Exists
-
-        injector:
-          enabled: false       #this can be an internal service addres, which is the current case
-         # externalVaultAddr: "https://openbao-ha-0.openbao-ha-internal:8201"
-        # Enable Integrated Storage (Raft) backend
-        raft:
-          enabled: true
-          # Recommended so each pod gets a stable node_id
-          setNodeId: true
-          # Minimal Raft + listener config (no TLS; good for lab/dev)
-          # Adjust for production (enable TLS, auto-unseal, etc.)
-          config: |-
+   
+                 # Minimal Raft + listener config (no TLS; good for lab/dev)
+         # Adjust for production (enable TLS, auto-unseal, etc.)
+        config: |-
             ui = false
 
             listener "tcp" {
