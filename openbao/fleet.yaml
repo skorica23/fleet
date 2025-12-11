@@ -17,6 +17,19 @@ helm:
   values:
     # OpenBao server configuration
     server:
+      
+      podTemplate:
+        nodeSelector:
+          openbao-node: "true"
+        
+        affinity:
+          nodeAffinity:
+            requiredDuringSchedulingIgnoredDuringExecution:
+             nodeSelectorTerms:
+              - matchExpressions:
+                - key: openbao-node
+                  operator: Exists
+
       ha:
         enabled: true
         # 3 OpenBao pods (HA cluster)
