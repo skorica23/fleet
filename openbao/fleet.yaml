@@ -41,7 +41,7 @@ helm:
             }
 
             storage "raft" {
-              path = "/openbao/data"
+              path = "/mnt/data"
             }
 
             service_registration "kubernetes" {}
@@ -49,9 +49,9 @@ helm:
       # Persistent storage for Raft data
       dataStorage:
         enabled: true
-        size: 10Gi
+        size: 8Gi
         # Adjust to your cluster storage class
-        storageClass: "longhorn"
+        storageClass: "local-path"
 
     # Optional: enable UI and expose via a ClusterIP service
     ui:
