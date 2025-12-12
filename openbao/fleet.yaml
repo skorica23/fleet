@@ -14,6 +14,6 @@ helm:
   force: false
   timeoutSeconds: 600
 
-  valuesFile:
+  valuesFiles:
     - values.yaml
     
