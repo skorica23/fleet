@@ -17,3 +17,5 @@ helm:
   valuesFiles:
     - values.yaml
     
+  vslues:
+     fleetForceRedeploy: "2025-01-18-01"
