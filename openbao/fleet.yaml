@@ -1,5 +1,5 @@
 defaultNamespace: openbao
-
+redeployOnModify: true
 helm:
   # Name of the Helm release
   releaseName: openbao-ha
@@ -18,4 +18,4 @@ helm:
     - values.yaml
     
   vslues:
-     fleetForceRedeploy: "2025-01-18-01"
+    fleetForceRedeploy: "2025-01-18-01"
