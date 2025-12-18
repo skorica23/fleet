@@ -3,8 +3,8 @@ redeployOnModify: true
 helm:
   # Name of the Helm release
   releaseName: openbao-ha
-  #takeOwnership: true
-  #atomic: true 
+  takeOwnership: true
+  atomic: true 
   # OpenBao official Helm chart
   chart: openbao
   repo: https://openbao.github.io/openbao-helm

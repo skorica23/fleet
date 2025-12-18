@@ -11,8 +11,8 @@ server:
   #       - matchExpressions:
   #           - key: openbao-node
   #             operator: Exists
-  podAnnotations:
-   fleet.cattle.io/restart: "{{ .Values.fleetForceRedeploy }}"
+  # podAnnotations:
+  #  fleet.cattle.io/restart: "{{ .Values.fleetForceRedeploy }}"
   
   # HA + Raft config
   ha:
@@ -28,7 +28,7 @@ server:
         listener "tcp" {
           tls_disable     = 1
           address         = "[::]:8200"
-          cluster_address = "http://$(HOSTNAME).openbao-ha-internal:8201"
+         
         }
 
         storage "raft" {
