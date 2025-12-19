@@ -14,7 +14,18 @@ server:
       volumeMounts:
         - name: data
           mountPath: /openbao/data
-
+  podSecurityContext:
+    fsGroup: 1000
+    fsGroupChangePolicy: OnRootMismatch
+  
+  containerSecurityContext:
+   runAsNonRoot: true
+   runAsUser: 100
+   runAsGroup: 1000
+  
+  securityContext:
+   runAsUser: 0
+  
   # Scheduling MUST be here, not under ha
   #nodeSelector:
    # openbao-node: "true"
