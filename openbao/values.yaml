@@ -18,11 +18,17 @@ server:
   podSecurityContext:
     fsGroup: 1000
     fsGroupChangePolicy: OnRootMismatch
-
+    seccompProfile:
+      type: RuntimeDefault
+  
   securityContext:
    runAsNonRoot: true
    runAsUser: 100
    runAsGroup: 1000
+   allowPrivilegeEscalation: false
+   capabilities:
+      drop:
+        - ALL
    
   
   # Scheduling MUST be here, not under ha
