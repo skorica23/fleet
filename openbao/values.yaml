@@ -11,6 +11,10 @@ server:
           chmod -R g+rwX /openbao/data || true
       securityContext:
         runAsUser: 0
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+            - ALL
       volumeMounts:
         - name: data
           mountPath: /openbao/data
