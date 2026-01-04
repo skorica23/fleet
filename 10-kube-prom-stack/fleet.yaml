@@ -1,10 +1,10 @@
 
-# namespace: monitoring   #this bundle is nmespace scoped, fleet must enforce namespace isolation
+# # namespace: monitoring   #this bundle is nmespace scoped, fleet must enforce namespace isolation
 # defaultNamespace: monitoring
 
 
 # helm:
-#   releaseName: prometheus
+#   releaseName: kube-prometheus-stack
 #   repo: https://prometheus-community.github.io/helm-charts
 #   chart:  "kube-prometheus-stack"
 
