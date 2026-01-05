@@ -1,9 +1,10 @@
 prometheus:
   prometheusSpec:
     enableRemoteWriteReceiver: true
-    
+
+
     storageSpec:   
-      volumeClaimTemplate::
+      volumeClaimTemplate:
         spec:
           storageClassName: local-path
           accessModes: ["ReadWriteOnce"]
