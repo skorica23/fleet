@@ -6,13 +6,14 @@ metadata:
 spec:
   replicas: 1
   # Disable ingress controller usage
-  ingress_type: none
-
+  service_type: ClusterIP
+  ingress_type: ingress
+   
   # Configure NodePort for external access
-  service_type: NodePort
+  # service_type: NodePort
 
   # You can optionally set NodePort manually (optional)
-  nodeport_port: 30080
+  # nodeport_port: 30080
   #nodeport_tls_port: 30443
 
   # Basic resource settings

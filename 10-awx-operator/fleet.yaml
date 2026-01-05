@@ -1,19 +1,19 @@
 defaultNamespace: awx
 
 helm:
-  releaseName: awx
+  releaseName: awx-operator
   repo: "https://ansible-community.github.io/awx-operator-helm/"
   chart: "awx-operator"
   version: "2.19.1"        # Example version—update to whichever you need
 
-  force: false
+ # force: false   #helm deletes and recreates resources if immutable fields change. Makes safe upgrades, predictable rollbacks
   timeoutSeconds: 300
 
   values:
-    installCRDs: true
-    image:
-      repository: quay.io/ansible/awx-operator
-      tag: "2.19.1"
+    installCRDs: true #explicitly defien the installation of crd.
+  #  image:
+   #   repository: quay.io/ansible/awx-operator
+    #  tag: "2.19.1"
     logLevel: DEBUG
     #enable namespace watch to overwrite default  conf
     #watchNamespace: ""
