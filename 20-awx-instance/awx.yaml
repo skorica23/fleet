@@ -4,7 +4,7 @@ metadata:
   name: awx-instance
   namespace: awx
 spec:
-  replicas: 1
+  #replicas: 1
   # Disable ingress controller usage
   service_type: ClusterIP
   ingress_type: ingress
@@ -25,34 +25,3 @@ spec:
   postgres_storage_requirements:
     requests:
       storage: 8Gi
-  
-  # # Use local-path for Task pods
-  # task_storage_class: local-path
-  # task_storage_requirements:
-  #   requests:
-  #     storage: 8Gi
-
-  # # Use local-path for Web UI pods
-  # web_storage_class: local-path
-  # web_storage_requirements:
-  #   requests:
-  #     storage: 8Gi
-
-
-  # affinity:
-  #   nodeAffinity:
-  #     requiredDuringSchedulingIgnoredDuringExecution:
-  #       nodeSelectorTerms:
-  #         - matchExpressions:
-  #             - key: kubernetes.io/hostname  # Example key
-  #               operator: In
-  #               values:
-  #                 - rke-node1  # List node names that should receive the pods
-  #                 #- node-2
-  # pg_capacity: 10Gi
-  # postgres_database:: awx
-  # # pv and pvc assigment:
-  # volumes:
-  #   - name: awx-postgres-volumes
-  #     persistentVolumeClaim:
-  #       claimName: awx-postgres-pvc

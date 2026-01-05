@@ -6,25 +6,9 @@ helm:
   chart: "awx-operator"
   version: "2.19.1"        # Example version—update to whichever you need
 
- # force: false   #helm deletes and recreates resources if immutable fields change. Makes safe upgrades, predictable rollbacks
+ 
   timeoutSeconds: 300
 
   values:
     installCRDs: true #explicitly defien the installation of crd.
-  #  image:
-   #   repository: quay.io/ansible/awx-operator
-    #  tag: "2.19.1"
     logLevel: DEBUG
-    #enable namespace watch to overwrite default  conf
-    #watchNamespace: ""
-
-    # # Example configuration to deploy an AWX instance
-    # awx-operator:
-    #   enabled: true
-
-    # awx:
-    #   enabled: true
-    #   spec:
-    #     ingress_type: none
-    #     route_tls_termination_mechanism: edge
-    #     replicas: 2

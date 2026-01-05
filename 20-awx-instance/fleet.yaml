@@ -1,6 +1,6 @@
 defaultNamespace: awx
 
-# No helm section needed — we deploy plain Kubernetes YAML
+# This is a kubernetes deployment, not helm
 targets:
   - clusterSelector: {}
 
