@@ -1,7 +1,7 @@
 defaultNamespace: awx
 
 dependsOn: 
-  - name: 10-awx-operator
+  - name: fleet-gitops-10-awx-operator
 
 # Tell Fleet to apply Kubernetes manifests from this directory
 manifests:
