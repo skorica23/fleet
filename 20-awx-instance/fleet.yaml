@@ -1,8 +1,6 @@
 defaultNamespace: awx
 
-# This is a kubernetes deployment, not helm
-targets:
-  - clusterSelector: {}
+dependsOn:  10-awx-operator
 
 # Tell Fleet to apply Kubernetes manifests from this directory
 manifests:
